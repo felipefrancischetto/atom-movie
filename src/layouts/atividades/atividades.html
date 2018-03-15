@@ -1,0 +1,29 @@
+<ion-header>
+  <navbar [titlePage]='title'></navbar>
+  <ion-toolbar color="white">
+    <ion-segment [(ngModel)]="segmentRoot">
+      <ion-segment-button class="chamado-segment" badge="3" badgeStyle="danger" value="pendentes">
+        pendentes
+      </ion-segment-button>
+      <ion-segment-button class="chamado-segment" value="em-execucao">
+        em execução
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="segmentRoot">
+    <ion-list *ngSwitchCase="'pendentes'">
+      <atividades-pendentes></atividades-pendentes>
+    </ion-list>
+    <ion-list *ngSwitchCase="'em-execucao'">
+      <atividades-execucao ></atividades-execucao>
+    </ion-list>
+  </div>
+
+
+
+</ion-content>
+
