@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
-import { FormAlmocarComponent } from './components/form-almocar/form-almocar.component';
-import { FormOutrosComponent } from './components/form-outros/form-outros.component';
-import { FormVoltarEmpresaComponent } from './components/form-voltar-empresa/form-voltar-empresa.component';
-import { FormAbastecerComponent } from './components/form-abastecer/form-abastecer.component';
-
 @Component({
   selector: 'atividades',
   templateUrl: 'atividades.html'
@@ -22,21 +17,5 @@ export class AtividadesPage {
 
   constructor(public navCtrl: NavController,
               public alertCtrl: AlertController) {
-  }
-
-  AbrirModalAlmocar() {
-    this.navCtrl.push(FormAlmocarComponent);
-  }
-
-  AbrirModalAbastecer() {
-    this.navCtrl.push(FormAbastecerComponent);
-  }
-
-  AbrirModalVoltarEmpresa() {
-    this.navCtrl.push(FormVoltarEmpresaComponent);
-  }
-
-  AbrirModalOutros() {
-    this.navCtrl.push(FormOutrosComponent);
   }
 }
