@@ -13,6 +13,7 @@
 </ion-header>
 
 <ion-content>
+
   <div [ngSwitch]="segmentRoot">
     <ion-list *ngSwitchCase="'pendentes'">
       <atividades-pendentes></atividades-pendentes>
@@ -21,5 +22,13 @@
       <atividades-execucao ></atividades-execucao>
     </ion-list>
   </div>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="presentPopover()">
+      <ion-icon name="add">
+      </ion-icon>
+    </button>
+  </ion-fab>
+
 </ion-content>
 

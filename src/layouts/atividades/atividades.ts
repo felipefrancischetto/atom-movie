@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { PopoverController } from 'ionic-angular';
+
+import { ModalAtividadesComponent } from './components/modal-atividades/modal-atividades.component';
 
 @Component({
   selector: 'atividades',
@@ -15,7 +17,10 @@ export class AtividadesPage {
     { nome: ' PADARIA CONEXAO LOCAL LTDA', endereco: ' Rua Fernando Lourenço,237 - 08320-420', tipo: 'Contrato'},
   ]
 
-  constructor(public navCtrl: NavController,
-              public alertCtrl: AlertController) {
+  constructor(public popoverCtrl: PopoverController) {}
+
+  presentPopover() {
+    let popover = this.popoverCtrl.create(ModalAtividadesComponent);
+    popover.present();
   }
 }

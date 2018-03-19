@@ -5,12 +5,14 @@ import { AtividadesPage } from './atividades';
 import { ComponentsModule } from '../../components';
 import { AtividadesPendentesComponent } from './components/atividades-pendentes/atividades-pendentes.component';
 import { AtividadesExecucaoComponent } from './components/atividades-execucao/atividades-execucao.component';
+import { ModalAtividadesComponent } from './components/modal-atividades/modal-atividades.component';
 
 @NgModule({
   declarations: [
     AtividadesPage,
     AtividadesExecucaoComponent,
     AtividadesPendentesComponent,
+    ModalAtividadesComponent,
   ],
   imports: [
     ComponentsModule,
@@ -20,6 +22,7 @@ import { AtividadesExecucaoComponent } from './components/atividades-execucao/at
     AtividadesPage,
     AtividadesExecucaoComponent,
     AtividadesPendentesComponent,
+    ModalAtividadesComponent,
   ]
 })
 
